@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(77, 73, 158, 0.9), rgba(81, 110, 126, 0.9)), url(images/restaurant.jpg);
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.container {
+    padding: 25px;
+    background-color: #f1f1f1;
+    max-height: 480px;
+    width: 90%;
+    max-width: 355px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    text-align: center; /* Center align header text */
+    margin-bottom: 40px;
+    color: #f39c12;
+    font-size: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.login-txt {
+    margin: 5px auto;
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #1964c6;
+    font-weight: 500;
+}
+
+.login-img {
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+.form {
+    padding: 20px 0;
+}
+
+.field {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.field label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.field input:not(.terms) {
+    height: 30px;
+    width: 98%;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #bfc9ca;
+}
+
+.field span {
+    position: absolute;
+    top: 27px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.field small {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form .button {
+    height: 33px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 7px;
+    color: #ffffff;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(to right, #e96646, #f4ad76);
+    cursor: pointer;
+    font-size: medium;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.button:hover {
+    transform: scale(1.02);
+}
+
+.field.success input {
+    border-color: #2ecc71;
+}
+
+.field.error input {
+    border-color: #e74c3c;
+}
+
+.field.success span.success {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.field.error span.error {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.field.error small {
+    visibility: visible;
+    color: #e74c3c;
+}
+
+@media (max-width: 550px) {
+    .header {
+        font-size: 32px; /* Adjust header size for smaller screens */
+    }
+
+    .container {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+}
